@@ -1,0 +1,13 @@
+# IDE
+/.idea
+
+# Packages
+/node_modules
+/vendor
+
+# Generated
+/var
+
+# Local
+/config/local.neon
+/.env

@@ -1,0 +1,7 @@
+localization:
+	locale:
+		default: null
+
+parameters:
+	application:
+		name: null
