@@ -1,0 +1,9 @@
+migrations:
+	groups:
+		app.structure:
+			directory: %appDir%/upgrade/migrations/structures
+		app.baseData:
+			directory: %appDir%/upgrade/migrations/base-data
+		app.dummyData:
+			directory: %appDir%/upgrade/migrations/dummy-data
+			enabled: %debugMode%
