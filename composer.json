@@ -9,7 +9,7 @@
 	"type": "project",
 	"license": "Unlicense",
 	"require": {
-		"php": ">=7.4.0 <8.2.0",
+		"php": ">=8.0.0 <8.2.0",
 		"orisai/cmf-core": "^1.0.0",
 		"orisai/cmf-ui": "^1.0.0",
 		"symfony/dotenv": "^5.2.0"
@@ -44,7 +44,7 @@
 	"config": {
 		"sort-packages": true,
 		"platform": {
-			"php": "7.4"
+			"php": "8.0"
 		}
 	}
 }
