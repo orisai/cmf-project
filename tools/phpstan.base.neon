@@ -4,9 +4,11 @@ includes:
 parameters:
 	tmpDir: ../var/tools/PHPStan
 
-	exceptionRules:
-		reportUnusedCatchesOfUncheckedExceptions: true
-		checkedExceptions:
+	exceptions:
+		check:
+			missingCheckedExceptionInThrows: true
+			tooWideThrowType: true
+		checkedExceptionClasses:
 			- Orisai\Exceptions\Check\CheckedException
 
 	checkMissingCallableSignature: true
