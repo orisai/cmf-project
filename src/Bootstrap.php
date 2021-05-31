@@ -3,11 +3,11 @@
 namespace App;
 
 use OriNette\DI\Boot\BaseConfigurator;
+use OriNette\DI\Boot\CookieGetter;
 use OriNette\DI\Boot\Environment;
 use OriNette\DI\Boot\ManualConfigurator;
 use Symfony\Component\Dotenv\Dotenv;
 use function dirname;
-use function explode;
 use function file_exists;
 
 final class Bootstrap
@@ -24,13 +24,10 @@ final class Bootstrap
 
 		$configurator->addStaticParameters(Environment::loadEnvParameters());
 
-		$debugCookiesVar = $_SERVER['DEBUG_COOKIE_VALUES'] ?? '';
-		$debugCookieValues = explode(',', $debugCookiesVar);
-
 		$configurator->setDebugMode(
 			Environment::isEnvDebugMode() ||
 			Environment::isLocalhost() ||
-			Environment::hasCookie($debugCookieValues),
+			Environment::hasCookie(CookieGetter::fromEnv()),
 		);
 		$configurator->enableDebugger();
 
