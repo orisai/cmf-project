@@ -14,3 +14,6 @@ parameters:
 	checkMissingCallableSignature: true
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
 	checkInternalClassCaseSensitivity: true
+
+	symfony:
+		console_application_loader: phpstan-console.php
