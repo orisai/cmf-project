@@ -25,9 +25,9 @@ final class Bootstrap
 		$configurator->addStaticParameters(Environment::loadEnvParameters());
 
 		$configurator->setDebugMode(
-			Environment::isEnvDebugMode() ||
-			Environment::isLocalhost() ||
-			Environment::hasCookie(CookieGetter::fromEnv()),
+			Environment::isEnvDebugMode()
+			|| Environment::isLocalhost()
+			|| Environment::hasCookie(CookieGetter::fromEnv()),
 		);
 		$configurator->enableDebugger();
 
