@@ -6,5 +6,10 @@ docs export-ignore
 tools/.coveralls.yml export-ignore
 .gitattributes export-ignore
 CHANGELOG-*.md export-ignore
-LICENSE
+LICENSE export-ignore
 README.md export-ignore
+
+# Not rebased
+
+composer.lock -merge
+package-lock.json -merge
