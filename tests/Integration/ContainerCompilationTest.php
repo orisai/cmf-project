@@ -14,7 +14,17 @@ final class ContainerCompilationTest extends TestCase
 	{
 		$localConfig = __DIR__ . '/../../config/local.neon';
 		if (!file_exists($localConfig)) {
-			file_put_contents($localConfig, '');
+			file_put_contents($localConfig, <<<'NEON'
+dbal:
+    connections:
+        default:
+            driver: pgsql
+            host: localhost
+            port: 5432
+            username: user
+            password: pass
+            database: ori
+NEON);
 		}
 
 		Bootstrap::boot()

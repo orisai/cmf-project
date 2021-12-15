@@ -31,8 +31,7 @@ final class Bootstrap
 		);
 		$configurator->enableDebugger();
 
-		$configurator->addConfig(__DIR__ . '/../vendor/orisai/cmf-core/src/wiring.neon');
-		$configurator->addConfig(__DIR__ . '/../vendor/orisai/cmf-ui/src/wiring.neon');
+		$configurator->addConfig(__DIR__ . '/../vendor/orisai/cmf/src/wiring.neon');
 
 		$configurator->addConfig(__DIR__ . '/wiring.neon');
 		$configurator->addConfig(__DIR__ . '/../config/common.neon');

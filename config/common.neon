@@ -1,6 +1,6 @@
 localization:
 	locale:
-		default: null
+		default: en-US
 
 parameters:
 	application:
