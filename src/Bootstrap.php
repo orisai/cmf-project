@@ -2,10 +2,10 @@
 
 namespace App;
 
-use OriNette\DI\Boot\BaseConfigurator;
 use OriNette\DI\Boot\CookieGetter;
 use OriNette\DI\Boot\Environment;
-use OriNette\DI\Boot\ManualConfigurator;
+use Orisai\Installer\AutomaticConfigurator;
+use Orisai\Installer\Loading\DefaultLoader;
 use Symfony\Component\Dotenv\Dotenv;
 use function dirname;
 use function file_exists;
@@ -13,15 +13,14 @@ use function file_exists;
 final class Bootstrap
 {
 
-	public static function boot(): BaseConfigurator
+	public static function boot(): AutomaticConfigurator
 	{
 		if (file_exists(__DIR__ . '/../.env')) {
 			$dotenv = new Dotenv();
 			$dotenv->load(__DIR__ . '/../.env');
 		}
 
-		$configurator = new ManualConfigurator(dirname(__DIR__));
-
+		$configurator = new AutomaticConfigurator(dirname(__DIR__), new DefaultLoader());
 		$configurator->addStaticParameters(Environment::loadEnvParameters());
 
 		$configurator->setDebugMode(
@@ -30,12 +29,6 @@ final class Bootstrap
 			|| Environment::hasCookie(CookieGetter::fromEnv()),
 		);
 		$configurator->enableDebugger();
-
-		$configurator->addConfig(__DIR__ . '/../vendor/orisai/cmf/src/wiring.neon');
-
-		$configurator->addConfig(__DIR__ . '/wiring.neon');
-		$configurator->addConfig(__DIR__ . '/../config/common.neon');
-		$configurator->addConfig(__DIR__ . '/../config/local.neon');
 
 		return $configurator;
 	}
