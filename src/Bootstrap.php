@@ -15,9 +15,9 @@ final class Bootstrap
 
 	public static function boot(): AutomaticConfigurator
 	{
-		if (file_exists(__DIR__ . '/../.env')) {
+		if (file_exists($envFile = __DIR__ . '/../.env')) {
 			$dotenv = new Dotenv();
-			$dotenv->load(__DIR__ . '/../.env');
+			$dotenv->load($envFile);
 		}
 
 		$configurator = new AutomaticConfigurator(dirname(__DIR__), new DefaultLoader());
