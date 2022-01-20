@@ -5,7 +5,7 @@ namespace App;
 use OriNette\DI\Boot\CookieGetter;
 use OriNette\DI\Boot\Environment;
 use Orisai\Installer\AutomaticConfigurator;
-use Orisai\Installer\Loading\DefaultLoader;
+use Orisai\Installer\Loader\DefaultLoader;
 use Symfony\Component\Dotenv\Dotenv;
 use function dirname;
 use function file_exists;
