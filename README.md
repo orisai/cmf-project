@@ -1,4 +1,8 @@
-<h1 align="center">Orisai CMF Project</h1>
+<h1 align="center">
+	<img src="https://github.com/orisai/.github/blob/main/images/repo_title.png" alt="Orisai"/>
+	<br/>
+	CMF Project
+</h1>
 
 <p align="center">
     Orisai CMF project skeleton
