@@ -45,6 +45,13 @@
 		"sort-packages": true,
 		"platform": {
 			"php": "8.0.10"
+		},
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"infection/extension-installer": true,
+			"orisai/installer": true,
+			"phpstan/extension-installer": true,
+			"symfony/thanks": true
 		}
 	}
 }
