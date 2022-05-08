@@ -1,7 +1,0 @@
-localization:
-	locale:
-		default: en-US
-
-parameters:
-	application:
-		name: null

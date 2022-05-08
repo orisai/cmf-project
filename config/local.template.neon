@@ -1,10 +1,7 @@
-dbal:
-	connections:
-		default:
-			autowired: true
-			driver: pgsql
-			host: 127.0.0.1
-			port: 5432
-			username: null
-			password: null
-			database: null
+parameters:
+	database:
+		host: 127.0.0.1
+		port: 5432
+		name: ''
+		user: ''
+		password: ''

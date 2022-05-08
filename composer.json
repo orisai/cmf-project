@@ -10,8 +10,7 @@
 	"license": "Unlicense",
 	"require": {
 		"php": ">=8.0.0 <8.2.0",
-		"orisai/cmf": "^1.0.0",
-		"symfony/dotenv": "^5.2.0"
+		"orisai/cmf": "^1.0.0"
 	},
 	"require-dev": {
 		"brianium/paratest": "^6.3.0",

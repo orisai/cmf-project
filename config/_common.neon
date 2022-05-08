@@ -1,0 +1,21 @@
+includes:
+	- _credentials.neon
+	- local.neon
+
+ori.cmf.dbal:
+	connections:
+		default:
+			driver: pgsql
+			host: %database.host%
+			port: %database.port%
+			database: %database.name%
+			username: %database.user%
+			password: %database.password%
+
+orisai.localization:
+	locale:
+		default: en-US
+
+parameters:
+	application:
+		name: null

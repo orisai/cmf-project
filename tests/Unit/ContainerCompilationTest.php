@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Tests\App\Integration;
+namespace Tests\App\Unit;
 
 use App\Bootstrap;
 use PHPUnit\Framework\TestCase;
@@ -15,15 +15,13 @@ final class ContainerCompilationTest extends TestCase
 		$localConfig = __DIR__ . '/../../config/local.neon';
 		if (!file_exists($localConfig)) {
 			file_put_contents($localConfig, <<<'NEON'
-dbal:
-    connections:
-        default:
-            driver: pgsql
-            host: localhost
-            port: 5432
-            username: user
-            password: pass
-            database: ori
+parameters:
+	database:
+		host: 127.0.0.1
+		port: 5432
+		name: ''
+		user: ''
+		password: ''
 NEON);
 		}
 

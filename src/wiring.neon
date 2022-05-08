@@ -1,4 +1,4 @@
-migrations:
+nextras.migrations:
 	groups:
 		app.structure:
 			directory: %appDir%/upgrade/migrations/structures
