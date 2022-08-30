@@ -2,8 +2,8 @@
 
 namespace App;
 
+use OriNette\DI\Boot\AutomaticConfigurator;
 use OriNette\DI\Boot\Environment;
-use Orisai\Installer\AutomaticConfigurator;
 use Orisai\Installer\Loader\DefaultLoader;
 use function dirname;
 
