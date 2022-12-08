@@ -9,7 +9,7 @@
 	"type": "project",
 	"license": "Unlicense",
 	"require": {
-		"php": ">=8.0.0 <8.3.0",
+		"php": ">=8.1.0 <8.3.0",
 		"orisai/cmf": "^1.0.0",
 		"orisai/nette-di": "dev-f/installer as 1.0.8"
 	},
