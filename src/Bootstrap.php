@@ -18,7 +18,7 @@ final class Bootstrap
 		);
 
 		$configurator->setDebugMode(
-			Environment::isEnvDebugMode()
+			Environment::isEnvDebug()
 			|| Environment::isLocalhost()
 			|| Environment::hasCookie(require __DIR__ . '/../config/_debug-cookies.php'),
 		);

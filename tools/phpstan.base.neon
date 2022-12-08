@@ -4,16 +4,17 @@ includes:
 parameters:
 	tmpDir: ../var/tools/PHPStan
 
+	checkBenevolentUnionTypes: true
+	checkMissingCallableSignature: true
+	checkInternalClassCaseSensitivity: true
+	checkTooWideReturnTypesInProtectedAndPublicMethods: true
+
 	exceptions:
 		check:
 			missingCheckedExceptionInThrows: true
 			tooWideThrowType: true
 		checkedExceptionClasses:
 			- Orisai\Exceptions\Check\CheckedException
-
-	checkMissingCallableSignature: true
-	checkTooWideReturnTypesInProtectedAndPublicMethods: true
-	checkInternalClassCaseSensitivity: true
 
 	symfony:
 		console_application_loader: phpstan-console.php
