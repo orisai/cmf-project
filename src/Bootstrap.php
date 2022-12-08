@@ -4,6 +4,7 @@ namespace App;
 
 use OriNette\DI\Boot\AutomaticConfigurator;
 use OriNette\DI\Boot\Environment;
+use OriNette\DI\Boot\FileDebugCookieStorage;
 use Orisai\Installer\Loader\DefaultLoader;
 use function dirname;
 
@@ -17,10 +18,14 @@ final class Bootstrap
 			new DefaultLoader(),
 		);
 
+		$cookieStorage = new FileDebugCookieStorage(__DIR__ . '/../config/debug-cookie-values.json');
+		$configurator->addServices([
+			'orisai.di.cookie.storage' => $cookieStorage,
+		]);
+
 		$configurator->setDebugMode(
 			Environment::isEnvDebug()
-			|| Environment::isLocalhost()
-			|| Environment::hasCookie(require __DIR__ . '/../config/_debug-cookies.php'),
+			|| Environment::isCookieDebug($cookieStorage),
 		);
 		$configurator->enableDebugger();
 

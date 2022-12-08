@@ -14,5 +14,6 @@
 /var
 
 # Local
+/config/debug-cookie-values.json
 /config/local.neon
 /.env
