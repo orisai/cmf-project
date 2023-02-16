@@ -17,8 +17,8 @@
 </p>
 
 <p align="center">
-	<a href="https://github.com/orisai/cmf-project/actions?query=workflow%3Aci">
-		<img src="https://github.com/orisai/cmf-project/workflows/ci/badge.svg">
+	<a href="https://github.com/orisai/cmf-project/actions?query=workflow%3ACI">
+		<img src="https://github.com/orisai/cmf-project/workflows/CI/badge.svg">
 	</a>
 	<a href="https://coveralls.io/r/orisai/cmf-project">
 		<img src="https://badgen.net/coveralls/c/github/orisai/cmf-project/v1.x?cache=300">
