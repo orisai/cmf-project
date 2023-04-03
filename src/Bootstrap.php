@@ -2,6 +2,7 @@
 
 namespace App;
 
+use OriCMF\Debug\TracyStyle;
 use OriNette\DI\Boot\AutomaticConfigurator;
 use OriNette\DI\Boot\Environment;
 use OriNette\DI\Boot\FileDebugCookieStorage;
@@ -23,6 +24,7 @@ final class Bootstrap
 			'orisai.di.cookie.storage' => $cookieStorage,
 		]);
 
+		TracyStyle::enable();
 		$configurator->setDebugMode(
 			Environment::isEnvDebug()
 			|| Environment::isCookieDebug($cookieStorage),
