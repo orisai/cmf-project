@@ -11,6 +11,8 @@ parameters:
 	checkMissingCallableSignature: true
 	checkInternalClassCaseSensitivity: true
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
+	reportAnyTypeWideningInVarTag: true
+	reportPossiblyNonexistentConstantArrayOffset: true
 
 	exceptions:
 		check:
